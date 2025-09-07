@@ -511,5 +511,135 @@ section, .album-card, .chat-bubble {
       .flipbook { width: 100%; height: 360px; }
     }
 
+/* -------------------------------
+   Ajustes extras de responsividade
+--------------------------------*/
+
+/* Tablets médios (até 1024px) */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .promo-content {
+    text-align: center;
+  }
+}
+
+/* Celulares grandes (até 768px) */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    margin-left: 10px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .promo-content img {
+    max-width: 100%;
+  }
+
+  .albums-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .album-card img {
+    height: 180px;
+  }
+
+  .album-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .flipbook {
+    height: 320px;
+  }
+}
+
+/* Celulares pequenos (até 480px) */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 6px 0;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 30px 10px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .promo-content div h2 {
+    font-size: 2rem;
+  }
+
+  .promo-content div p {
+    font-size: 1rem;
+  }
+
+  .album-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .chat-bubble {
+    max-width: 90%;
+    font-size: 0.95rem;
+    padding: 12px 18px;
+  }
+
+  .contato p {
+    font-size: 1rem;
+  }
+
+  .flipbook {
+    height: 240px;
+  }
+}
+
+
 
    
