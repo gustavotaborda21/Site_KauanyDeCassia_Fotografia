@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Álbum Smash the Cake - Kauany de Cássia Fotografia</title>
+ <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/icon.ico">
+
+<body>
+  <header>
+    <a href="index.html">← Voltar</a>
+    <div>
+      <h1 style="margin:0;font-family:'Great Vibes',cursive;color:rgb(182, 138,104);">Álbum Smash the Cake</h1>
+      <p style="margin:4px 0 0;color:#6e6e6e;">Capa dura fosca • 20 páginas • Tam 21 x 30cm </p>
+    </div>
+  </header>
+
+  <section class="album-container">
+    <div id="flipbook" class="flipbook">
+      <!-- CAPA -->
+      <div><img src="img/albums/smash/cover.jpg" alt="Capa do Álbum Smash the Cake"></div>
+
+      <!-- PÁGINAS -->
+      <div><img src="img/albums/smash/page1.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page2.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page3.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page4.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page5.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page6.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page7.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page8.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page9.jpg" alt=""></div>
+      <div><img src="img/albums/smash/page10.jpg" alt=""></div>
+
+      <!-- CONTRA-CAPA -->
+      <div><img src="img/albums/smash/end.jpg" alt="Contra-capa"></div>
+    </div>
+  </section>
+
+  <div class="album-actions">
+    <button id="prev">⬅️ Anterior</button>
+    <button id="next">Próxima ➡️</button>
+    <button id="first">🔙 Início</button>
+    <a class="btn-whatsapp" 
+       href="https://wa.me/5542999075875?text=Olá%20vim%20pelo%20site,%20gostaria%20de%20um%20orçamento%20para%20um%20álbum%20smash%20the%20cake." 
+       target="_blank">Solicitar Orçamento</a>
+  </div>
+
+  <footer style="text-align:center;padding:20px 0;">
+    <p>&copy; 2025 Kauany de Cássia Fotografia</p>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Turn.js (local ou libs/turn.min.js) -->
+  <script src="libs/turn.min.js"></script>
+
+  <!-- Inicialização -->
+  <script>
+    $(function(){
+      var $book = $("#flipbook");
+
+      $book.turn({
+        width: 1680,   // largura total (2 páginas)
+        height: 600,   // altura proporcional
+        autoCenter: true,
+        display: 'double',
+        acceleration: true
+      });
+
+      // Botões
+      $("#next").click(function(){ $book.turn("next"); });
+      $("#prev").click(function(){ $book.turn("previous"); });
+      $("#first").click(function(){ $book.turn("page", 1); });
+
+      // Teclado
+      $(document).on("keydown", function(e){
+        if (e.key === "ArrowRight") $book.turn("next");
+        if (e.key === "ArrowLeft") $book.turn("previous");
+      });
+    });
+  </script>
+</body>
+</html>
