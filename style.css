@@ -640,6 +640,58 @@ section, .album-card, .chat-bubble {
   }
 }
 
+/* Botão hamburguer (escondido no desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(182, 138, 104);
+}
+
+/* Mobile e tablet */
+@media (max-width: 1024px) {
+  header {
+    position: fixed;   /* fixo no topo */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .menu-toggle {
+    display: block; /* mostra o botão */
+  }
+
+  nav.menu {
+    display: none; /* esconde links por padrão */
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    top: 100%; /* logo abaixo do header */
+    left: 0;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  nav.menu a {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  /* Quando o menu estiver ativo */
+  nav.menu.active {
+    display: flex;
+  }
+}
+
 
 
    
+
