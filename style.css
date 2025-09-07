@@ -640,58 +640,65 @@ section, .album-card, .chat-bubble {
   }
 }
 
-/* Botão hamburguer (escondido no desktop) */
+/* botão hamburguer escondido no desktop */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   background: none;
   border: none;
   cursor: pointer;
-  color: rgb(182, 138, 104);
+  color: #b68a68; /* mesma cor dos seus detalhes */
 }
 
-/* Mobile e tablet */
+/* MOBILE e TABLET */
 @media (max-width: 1024px) {
   header {
-    position: fixed;   /* fixo no topo */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 1000;
     background: #fff;
     padding: 10px 20px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
+  header .logo {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* mostra o botão */
   .menu-toggle {
-    display: block; /* mostra o botão */
+    display: block;
   }
 
+  /* esconde menu por padrão */
   nav.menu {
-    display: none; /* esconde links por padrão */
+    display: none;
     flex-direction: column;
     background: #fff;
-    width: 100%;
     position: absolute;
-    top: 100%; /* logo abaixo do header */
+    top: 100%;
     left: 0;
+    width: 100%;
     padding: 15px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   nav.menu a {
-    margin: 10px 0;
-    font-size: 1.1rem;
+    padding: 12px;
     text-align: center;
+    font-size: 1.1rem;
+    border-top: 1px solid #eee;
   }
 
-  /* Quando o menu estiver ativo */
+  /* quando ativo */
   nav.menu.active {
     display: flex;
   }
 }
-
-
-
-   
-
