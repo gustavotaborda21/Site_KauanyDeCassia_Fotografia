@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Álbum Acompanhamento Mensal - Kauany de Cássia Fotografia</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4/turn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+  <style>
+    .album-container { width: 90%; max-width: 900px; margin: 50px auto; box-shadow: 0 0 20px rgba(230,183,198,0.3); }
+    .flipbook { width: 100%; height: 600px; }
+    .flipbook img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+    .album-actions { text-align: center; margin-top: 25px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo Kauany de Cássia Fotografia">
+      <div>
+        <h1>Kauany de Cássia Fotografia</h1>
+        <p class="slogan">O agora guardado com carinho para sempre</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="index.html#promocao">Promoção</a>
+      <a href="index.html#portfolio">Álbuns</a>
+      <a href="index.html#depoimentos">Depoimentos</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="album-container">
+    <div id="flipbook" class="flipbook">
+      <div><img src="img/albums/acompanhamento/cover.jpg" alt="Capa do Álbum Acompanhamento Mensal"></div>
+      <!-- 20 páginas -->
+      <div><img src="img/albums/acompanhamento/page1.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page2.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page3.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page4.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page5.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page6.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page7.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page8.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page9.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page10.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page11.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page12.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page13.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page14.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page15.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page16.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page17.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page18.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page19.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/page20.jpg" alt=""></div>
+      <div><img src="img/albums/acompanhamento/end.jpg" alt="Contra-capa"></div>
+    </div>
+  </section>
+
+  <div class="album-actions">
+    <a href="https://wa.me/5542999075875?text=Olá%20vim%20pelo%20site,%20gostaria%20de%20um%20orçamento%20para%20acompanhamento%20mensal." 
+       target="_blank" class="btn-whatsapp">Solicitar Orçamento</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Kauany de Cássia Fotografia - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      $("#flipbook").turn({ width: 900, height: 600, autoCenter: true });
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
